@@ -23,6 +23,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
+    welcome_channel_id = config.welcome_channel_id
     welcome_channel = bot.get_channel(welcome_channel_id)
     name_member = str(member)
     embed = discord.Embed(description=(f"{name_member} Join in the server"), color=0x5CDBF0)
