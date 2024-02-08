@@ -90,7 +90,7 @@ async def on_reaction_add(reaction, user):
                 # set permissions
 
                 role_viewer = (discord.utils.get(reaction.message.guild.roles, name=config.ticket_viewer_role))
-                role_op = (discord.utils.get(reaction.message.guild.roles, name=config.All_commands_role))
+                role_op = (discord.utils.get(reaction.message.guild.roles, name=config.all_commands_role))
 
                 await new_ticket.set_permissions(user, overwrite = permissions_ticket)
                 await new_ticket.set_permissions(role_viewer, overwrite = permissions_ticket)
@@ -118,7 +118,7 @@ Closed by: {user}
 
 @bot.command()
 async def ticketset(ctx):
-    role = (discord.utils.get(ctx.author.roles, name=config.All_commands_role))
+    role = (discord.utils.get(ctx.author.roles, name=config.all_commands_role))
     if role:
         await ctx.message.delete()
         global message_tickets
@@ -143,7 +143,7 @@ async def ticketset(ctx):
 
 @bot.command()
 async def purge(ctx, frag=2):
-    role = (discord.utils.get(ctx.author.roles, name=config.All_commands_role))
+    role = (discord.utils.get(ctx.author.roles, name=config.all_commands_role))
     if role:
         frag = int(frag)
         await ctx.channel.purge(limit=frag)
@@ -154,7 +154,7 @@ async def purge(ctx, frag=2):
 @bot.command()
 async def strike(ctx, member: discord.Member, reason, number = None):
 
-    role = (discord.utils.get(ctx.author.roles, name=config.All_commands_role))
+    role = (discord.utils.get(ctx.author.roles, name=config.all_commands_role))
     if role:
 
         message_strike =(

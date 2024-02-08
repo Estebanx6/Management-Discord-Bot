@@ -13,7 +13,7 @@ welcome_message = True #Define if you want have welcome messsage
 
 # Roles settings
 roles = ["Owner", "Admin", "Mod", "@everyone"] # Set the roles to auto change the nick with the prefix of roll, keep the @everyone in Last Position
-All_commands_role = "Owner" #Set the all commands role
+all_commands_role = "Owner" #Set the all commands role
 ticket_viewer_role = "Admin" #Set the viewer tickets role
 
 
